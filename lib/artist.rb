@@ -7,7 +7,9 @@ class Artist
   end
 
   def songs
-
+    Song.all.selext do |song|
+      song.artist == self
+    end
   end
 
   def add_song(song)
